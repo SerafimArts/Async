@@ -1,25 +1,5 @@
 # Async
 
-<p align="center">
-    <a href="https://travis-ci.org/SerafimArts/Async"><img src="https://travis-ci.org/SerafimArts/Async.svg?branch=master" alt="Build Status"></a>
-    <a href="https://codeclimate.com/github/SerafimArts/Async/maintainability"><img src="https://api.codeclimate.com/v1/badges/b2606e4aa0d70307198d/maintainability" /></a>
-    <a href="https://codeclimate.com/github/SerafimArts/Async/test_coverage"><img src="https://api.codeclimate.com/v1/badges/b2606e4aa0d70307198d/test_coverage" /></a>
-</p>
-<p align="center">
-    <a href="https://packagist.org/packages/serafim/async"><img src="https://img.shields.io/badge/PHP-7.2+-4f5b93.svg" alt="PHP 7.1+"></a>
-    <a href="https://packagist.org/packages/serafim/async"><img src="https://poser.pugx.org/serafim/async/version" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/serafim/async"><img src="https://poser.pugx.org/serafim/async/downloads" alt="Total Downloads"></a>
-    <a href="https://raw.githubusercontent.com/SerafimArts/Async/master/LICENSE.md"><img src="https://poser.pugx.org/serafim/async/license" alt="License MIT"></a>
-</p>
-
-## Installation
-
-Install via [Composer](https://getcomposer.org/):
-
-```sh
-composer require serafim/async
-```
-
 ## Usage
 
 Async "Hello World". Just for fun %)
