@@ -34,6 +34,73 @@ $prom = async(static function () use ($fn) {
 });
 ```
 
+## All you need to know
+
+1) Function `async` returns a Promise.
+2) Result of a promise is an `return` value of given closure.
+3) Every `yield` expression is an EventLoop "tick".
+4) Every `yield Promise` or `return Promise` waits for completion, and then returns the result.
+
+## Examples
+
+```php
+$promise = async(fn () => 23)
+$promise->then(fn ($value) => echo $value)
+
+// 23
+```
+
+----
+
+```php
+$promise = async(function () {
+    echo yield 1;
+    echo yield 2;
+    
+    return 3;
+});
+$promise->then(fn ($value) => echo $value)
+
+// 123
+```
+
+----
+
+```php
+async(function () {
+    echo yield 1;
+    echo yield 3;
+});
+
+async(function () {
+    echo yield 2;
+    echo yield 4;
+});
+
+// 1234
+```
+
+----
+
+```php
+async(function() {
+    $promise = async(fn () => 23);
+    
+    echo yield $promise; // 23
+});
+```
+
+----
+
+```php
+$promise = async(function() {
+    return async(fn () => 23);
+});
+
+$promise->then(fn ($value) => echo $value);
+// 23
+```
+
 TL;DR; Do not us it =)
 
 ## License
